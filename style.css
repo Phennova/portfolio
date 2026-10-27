@@ -1,5 +1,4 @@
 :root{--bg:#fafaf9;--fg:#1c1c1c;--mute:#777;--line:#e4e4e0;--card:#fff;--acc:#3b5bdb}
-@media(prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--mute:#8a8a8a;--line:#2a2a2a;--card:#181818;--acc:#8ea2ff}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;padding:env(safe-area-inset-top) 0 0}
 a{color:inherit}
@@ -53,7 +52,6 @@ body{overflow-wrap:anywhere}img{max-width:100%}
 
 /* Design A: quiet editorial */
 :root{--bg:#fafaf7;--fg:#1b1b1b;--mute:#777;--line:#e3e3dc;--card:#fff;--acc:#1b1b1b}
-@media(prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ececea;--mute:#8d8d88;--line:#2c2c29;--card:#1c1c1a;--acc:#ececea}}
 body{font:17px/1.65 Georgia,"Times New Roman",serif}
 .top,nav a,.meta,.tag,.note,button,select,input,textarea,label,footer{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
 .brand{font:600 16px system-ui;letter-spacing:.02em}
