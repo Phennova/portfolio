@@ -96,12 +96,14 @@ function render() {
   viewHome();
 }
 function viewHome() {
-  app.append(h("section", { class: "hero" }, h("h1", {}, site.name), h("p", {}, site.tagline), h("p", { style: "margin-top:10px" }, site.bio)));
+  app.append(h("section", { class: "hero" }, h("h1", {}, site.name), site.tagline ? h("p", { class: "sub" }, site.tagline) : null, site.bio ? h("p", { style: "margin-top:10px" }, site.bio) : null));
   const projects = [...site.projects].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-  const wrap = h("div", { class: site.layout || "grid" });
+  const wrap = h("div", { class: site.layout || "list" });
   projects.forEach((p) => wrap.append(card(p)));
-  if (!projects.length) wrap.append(h("p", { class: "note" }, "No projects yet."));
+  if (!projects.length && editing) wrap.append(h("p", { class: "note" }, "No projects yet. Use “+ Add project” above."));
   app.append(wrap);
+  const recent = site.projects.flatMap((p) => (p.timeline || []).map((e) => ({ ...e, p }))).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 5);
+  if (recent.length) app.append(h("div", { class: "lab" }, "RECENT"), timelineEl(recent, true));
 }
 function card(p) {
   const c = h("article", { class: "card", tabindex: 0, onclick: () => (location.hash = "#/p/" + p.id), onkeydown: (e) => e.key === "Enter" && (location.hash = "#/p/" + p.id) },

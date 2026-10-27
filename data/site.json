@@ -1,35 +1,7 @@
 {
   "name": "Phennova",
-  "tagline": "Coder. Security learner. Local-AI tinkerer.",
-  "bio": "A place for the things I build on my own time: games, tools and experiments.",
-  "layout": "grid",
-  "projects": [
-    {
-      "id": "daily1",
-      "title": "Daily Builds",
-      "summary": "A new creative game or tool every day, built with an AI agent.",
-      "description": "A public repo where one finished, dependency-free browser game or tool lands every day. Each build has its own README, design notes and screenshot, and runs straight from a link on a phone.",
-      "link": "https://github.com/Phennova/daily-builds",
-      "tags": ["games", "tools", "automation"],
-      "date": "2026-10-27",
-      "image": "",
-      "timeline": [
-        { "id": "d1", "date": "2026-10-27", "type": "milestone", "text": "Repo and nightly pipeline set up. First build: a carrier-landing game." }
-      ]
-    },
-    {
-      "id": "rule1",
-      "title": "Rulebound",
-      "summary": "A Minecraft challenge-run mod where you play by a set of rules.",
-      "description": "A NeoForge mod for Minecraft. Pick a rule pack (dietary, religious, the Ten Commandments and more), break a rule and the run is over. Supports shared-world races between players.",
-      "link": "",
-      "tags": ["minecraft", "neoforge", "java"],
-      "date": "2026-10-26",
-      "image": "",
-      "timeline": [
-        { "id": "r1", "date": "2026-10-26", "type": "milestone", "text": "v0.2.0 released with 38 rule packs." },
-        { "id": "r2", "date": "2026-10-26", "type": "update", "text": "Faith and diet packs added; client testing still to do." }
-      ]
-    }
-  ]
+  "tagline": "",
+  "bio": "",
+  "layout": "list",
+  "projects": []
 }
