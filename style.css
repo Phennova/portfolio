@@ -1,0 +1,52 @@
+:root{--bg:#fafaf9;--fg:#1c1c1c;--mute:#777;--line:#e4e4e0;--card:#fff;--acc:#3b5bdb}
+@media(prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--mute:#8a8a8a;--line:#2a2a2a;--card:#181818;--acc:#8ea2ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;padding:env(safe-area-inset-top) 0 0}
+a{color:inherit}
+.top{display:flex;justify-content:space-between;align-items:center;max-width:960px;margin:0 auto;padding:22px 20px}
+.brand{font-weight:600;letter-spacing:.04em;text-decoration:none;font-size:1.1rem}
+nav{display:flex;gap:18px;align-items:center}
+nav a{text-decoration:none;color:var(--mute);font-size:.95rem}nav a.on{color:var(--fg)}
+main{max-width:960px;margin:0 auto;padding:10px 20px 60px}
+footer{max-width:960px;margin:0 auto;padding:20px;display:flex;justify-content:space-between;color:var(--mute);font-size:.85rem}
+button,select,input,textarea{font:inherit;color:inherit}
+button{background:var(--fg);color:var(--bg);border:0;border-radius:6px;padding:7px 14px;cursor:pointer}
+button.ghost{background:none;color:var(--mute);border:1px solid var(--line)}
+button.danger{background:#b3261e;color:#fff}
+.hero{padding:40px 0 30px}.hero h1{font-size:2.2rem;margin:0 0 6px;font-weight:600}
+.hero p{margin:0;color:var(--mute);max-width:56ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.list{display:flex;flex-direction:column;gap:0}
+.list .card{display:flex;gap:18px;border-radius:0;border-width:0 0 1px;background:none;padding:18px 0}
+.list .card img{width:140px;height:90px;flex:none;border-radius:6px}
+.minimal{display:flex;flex-direction:column}
+.minimal .card{border-width:0 0 1px;border-radius:0;background:none;padding:12px 0;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.minimal .card img,.minimal .card p{display:none}
+.card{border:1px solid var(--line);background:var(--card);border-radius:10px;overflow:hidden;cursor:pointer;transition:transform .15s}
+.card:hover{transform:translateY(-2px)}
+.minimal .card:hover,.list .card:hover{transform:none}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--line)}
+.card .b{padding:14px 16px}.list .card .b,.minimal .card .b{padding:0}
+.card h3{margin:0 0 4px;font-size:1.05rem}.card p{margin:0;color:var(--mute);font-size:.92rem}
+.meta{color:var(--mute);font-size:.8rem}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:0 9px;font-size:.75rem;color:var(--mute);margin:6px 4px 0 0}
+.tl{position:relative;margin:20px 0 0;padding-left:22px;border-left:2px solid var(--line)}
+.tl .it{position:relative;margin:0 0 20px}
+.tl .it::before{content:"";position:absolute;left:-29px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--mute)}
+.tl .it.milestone::before{background:var(--acc);border-color:var(--acc);width:14px;height:14px;left:-31px;top:5px}
+.tl .it.milestone strong{color:var(--acc)}
+.tl .it a.proj{color:var(--mute);font-size:.8rem}
+#editbar{max-width:960px;margin:0 auto 6px;padding:8px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-bottom:1px dashed var(--line)}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg);width:min(640px,94vw);max-height:90vh;padding:22px}
+dialog::backdrop{background:#0008}
+label{display:block;margin:12px 0 4px;font-size:.82rem;color:var(--mute)}
+input,textarea,select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+textarea{min-height:110px;resize:vertical}
+.row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}.row .sp{flex:1}
+.hero-img{width:100%;border-radius:10px;margin:10px 0;display:block}
+.err{color:#b3261e;font-size:.9rem;margin-top:8px}
+.note{color:var(--mute);font-size:.85rem}
+@media(prefers-reduced-motion:reduce){.card{transition:none}}
+
+body{overflow-wrap:anywhere}img{max-width:100%}
+@media(max-width:520px){.top{padding:16px 14px}nav{gap:10px}main{padding:6px 14px 50px}.list .card{flex-direction:column}.list .card img{width:100%;height:auto}}
